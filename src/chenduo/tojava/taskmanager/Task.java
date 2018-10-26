@@ -28,6 +28,13 @@ public class Task {
         this.isDone = isDone;
     }
     public String getContent(){return this.taskContent;}
+    /**
+     * Delete value of attribute <code>delete </code>
+     * @param remove
+     */
+    public void remove(){
+
+    }
 
     /**
      * Overrides <code>toString</code> method

@@ -40,8 +40,20 @@ public class TaskList {
         tasks.add(t);
     }
 
+    /**
+     * Clear all task in task list
+     */
+
     public void clearTask(){
             tasks.clear();}
+
+    /**
+     * Delete specified task in task list
+      */
+    public void deleteSpecTask(){
+        int index = Integer.parseInt(line.substring("done".length()).trim());
+        this.tasks.get(index - 1).remove();
+    }
 
     /**
      * Save task list to file.
@@ -54,10 +66,6 @@ public class TaskList {
             throw new TaskManagerException(e.getMessage());
         }
     }
-    /**
-     * Delete all task in task list
-     */
-    public void clearAllTask(){
 
-    }
+
 }
