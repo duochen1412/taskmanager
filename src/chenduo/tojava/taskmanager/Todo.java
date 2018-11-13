@@ -22,5 +22,4 @@ public class Todo extends Task{
         else return this.taskContent+"\n\tis done? No";
     }
 
-
 }

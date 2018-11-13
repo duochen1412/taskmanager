@@ -1,1 +1,8 @@
 T|0|taskproject
+D|0|sleep|9pm
+T|0|study
+D|0|scold my boss|sometimes
+T|0|kill my boss
+T|0|coding
+T|0|debug
+T|0|watch

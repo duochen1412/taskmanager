@@ -11,7 +11,7 @@ public class Ui {
         in = new Scanner(System.in);
     }
     public static void showWelcomeMessage(){
-        System.out.println("Welcome to TaskManager-Level 10!");
+        System.out.println("Welcome to TaskManager!");
     }
     public String readUserCommand(){
         System.out.print("Your task?");
@@ -25,7 +25,7 @@ public class Ui {
         System.out.println(msg);
     }
     public static void printWelcome(){
-        System.out.println("Welcome to TaskManager-Level 10!");
+        System.out.println("Welcome to TaskManager!");
     }
 
 }

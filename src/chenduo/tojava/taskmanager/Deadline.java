@@ -1,4 +1,5 @@
 package chenduo.tojava.taskmanager;
+
 /**
  * Represents deadline task. A <code>Deadline</code> task constructed by task description, status and date of deadline
  * @author Chen Duo
@@ -28,5 +29,11 @@ public class Deadline extends Todo{
      * @return Date of deadline
      */
     public String getDeadlineDate(){return this.deadlineDate;}
+
+    public void setDeadline(String s){
+        this.deadlineDate = s;
+    }
+
+
 }
 

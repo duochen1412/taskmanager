@@ -60,9 +60,11 @@ public class Storage {
         String[] taskInfo = line.split("\\|");
         Task task;
         boolean isDone = (Integer.parseInt(taskInfo[1].trim())==1);
-        if(taskInfo[0].trim() == "D")
-            task=new Deadline(taskInfo[2],isDone,taskInfo[3]);
-        else task=new Todo(taskInfo[2],isDone);
+        if(taskInfo[0].trim().equals("D")) {
+            task = new Deadline(taskInfo[2], isDone, taskInfo[3]);
+        }else {
+            task = new Todo(taskInfo[2], isDone);
+        }
         return task;
     }
 
@@ -82,6 +84,7 @@ public class Storage {
                     Deadline td = (Deadline) t;
                     isDone =  td.isDone ? 1 : 0;
                     pw.println("D|" + isDone  + "|" + td.getContent() + "|" + td.getDeadlineDate());
+
                 }else if(t instanceof Todo){
                     Todo tt = (Todo) t;
                     isDone =  tt.isDone ? 1 : 0;

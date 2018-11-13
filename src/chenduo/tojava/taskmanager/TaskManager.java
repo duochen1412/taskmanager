@@ -1,6 +1,7 @@
 package chenduo.tojava.taskmanager;
 import java.lang.*;
 
+
 /**
  * To get input command from user run command accordingly
  * @author Chen Duo
@@ -38,6 +39,9 @@ public class TaskManager {
                     case "deadline":tasks.addTask(Parser.createDeadline(fullCommand));break;
                     case "done":tasks.markAsDone(fullCommand);break;
                     case "cleartask":tasks.clearTask();break;
+                    case "delete":tasks.deleteSpecTask(fullCommand);break;
+                    case "modifyC":tasks.modifyContent(fullCommand);break;
+                    case "modifyD":tasks.modifyDeadline(fullCommand);break;
                     default: ui.printError("Unknown command! please try again");
                 }
             } catch (TaskManagerException e) {

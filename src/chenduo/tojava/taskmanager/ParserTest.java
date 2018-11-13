@@ -19,6 +19,7 @@ public class ParserTest {
     /**
      * @throws TaskManagerException
      */
+    @Test
     public void createTodo() throws TaskManagerException {
         Todo actual = Parser.createTodo("todo read book");
         Todo expected = new Todo("read book");
@@ -28,6 +29,7 @@ public class ParserTest {
     /**
      * @throws TaskManagerException
      */
+    @Test
     public void createDeadline() throws  TaskManagerException {
         Deadline actualDLTask = Parser.createDeadline("deadline read book /by Monday");
         Deadline expectedDLTask = new Deadline("read book","Monday");

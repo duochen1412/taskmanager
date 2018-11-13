@@ -7,7 +7,6 @@ package chenduo.tojava.taskmanager;
 public class Parser {
     /**
      * Get command from input
-     * @param input <code>String</code> object
      * @return command
      */
     public static String getCommandWord(String fullCommand){
@@ -17,7 +16,6 @@ public class Parser {
 
     /**
      * Convert String input to Todo type object
-     * @param input <code>String</code> object
      * @return task <code>Todo</code> object
      * @throws TaskManagerException
      */
@@ -32,7 +30,6 @@ public class Parser {
 
     /**
      * Convert String input to Deadline type object
-     * @param input <code>String</code> object
      * @return task <code>Deadline</code> object
      * @throws TaskManagerException
      */
@@ -45,6 +42,7 @@ public class Parser {
         if(cmdStr[1].isEmpty())
             throw new TaskManagerException("Empty deadline date for DEADLINE");
         String deadLine = cmdStr[1].trim();
+
         String desc = cmdStr[0].trim().substring("deadline".length()).trim();
         if (desc.isEmpty())
             throw new TaskManagerException("Empty description for DEADLINE");
